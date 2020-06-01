@@ -10,7 +10,7 @@
 
 <!--    配置视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/viex"></property>
+        <property name="prefix" value="/WEB-INF/view/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
 
@@ -20,8 +20,4 @@
 <!--    MVC驱动-->
     <mvc:annotation-driven></mvc:annotation-driven>
 
-<!--    在设置的包下，将所有的接口生成动态代理实现类，由spring管理-->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="mapper"></property>
-    </bean>
 </beans>

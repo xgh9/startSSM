@@ -6,7 +6,6 @@
 <configuration>
 
 
-    <properties resource="jdbc.properties"></properties>
     <settings>
         <!--        将下划线映射成驼峰-->
 <!--        <setting name="mapUnderscoreToCamelCase" value="true"/>-->

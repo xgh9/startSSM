@@ -1,0 +1,244 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a{
+	text-decoration:none;
+	display:block;
+	height:100%
+}
+html, body {
+  height: 100%;
+}
+
+/* ===================================通知下发界面滚动条样式 start================================================= */
+       #scroller-container{
+           overflow-x: hidden;
+           overflow-y:auto;
+       }
+
+       /*::-webkit-scrollbar 滚动条整体部分，可以设置宽度啥的*/
+       #scroller-container::-webkit-scrollbar {
+           width: 5px;
+           /*height: 4px;*/
+       }
+
+       /*::-webkit-scrollbar-thumb 滚动的滑块*/
+       #scroller-container::-webkit-scrollbar-thumb{
+           border-radius: 5px;
+           -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+           background: rgba(0,0,0,0.2);
+       }
+
+       /*::-webkit-scrollbar-track  外层轨道*/
+       #scroller-container::-webkit-scrollbar-track{
+           -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0,2);
+           border-radius:0;
+           background:rgba(0,0,0,0.1);
+       }
+
+        /*其他的滚动条设置
+       ::-webkit-scrollbar 滚动条整体部分，可以设置宽度啥的
+       ::-webkit-scrollbar-button 滚动条两端的按钮
+       ::-webkit-scrollbar-track  外层轨道
+       ::-webkit-scrollbar-track-piece  内层滚动槽
+       ::-webkit-scrollbar-thumb 滚动的滑块
+       ::-webkit-scrollbar-corner 边角
+       ::-webkit-resizer 定义右下角拖动块的样式*/
+
+       /* ===================================通知下发界面滚动条样式  end ================================================= */
+
+
+.bg {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background: url("../images/background-image.png")  center center;
+  background-size: cover;
+}
+
+
+
+.header-container {
+  position: relative;
+  text-align: center;
+  height: 80px;
+}
+.header-container span.title {
+  display: inline-block;
+  margin-top: 1.06667rem;
+  width: 737px;
+  height: 40px;
+  background: url("../images/header.png") no-repeat;
+}
+.header-container span.title2 {
+  display: inline-block;
+  margin-top: 1.06667rem;
+  width: 737px;
+  height: 40px;
+  background: url("../images/header2.png") no-repeat;
+}
+.header-container span.title3 {
+  display: inline-block;
+  margin-top: 1.06667rem;
+  width: 737px;
+  height: 40px;
+  background: url("../images/header3.png") no-repeat;
+}
+.header-container .handle {
+  position: absolute;
+  top: 37px;
+  left: 20px;
+  color: #f7f7f7; 
+}
+
+
+.main {
+  width: 97%;
+  margin: 0 auto;
+  color: #f7f7f7;
+  font-size: 18px;
+  font-family: 'Microsoft Yahei';
+  height: 88%;
+}
+.main .title {
+  position: relative;
+  z-index: 1000;
+  color: #177BE6;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+						/*index.jsp*/
+.main .list {
+  position: relative;
+  width: 99%;
+  height: 98%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid #08509D;
+  box-shadow: inset 0px 0px 20px rgba(9, 77, 161, 0.7);
+  text-align:center;
+}
+.main .list::before {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 40px;
+  background: #171736 url("../images/border.png") no-repeat;
+  top: -8px;
+  left: -2px;
+}
+.main .list::after {
+  content: '';
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: url("../images/border.png") no-repeat -359px 0;
+  top: -2px;
+  right: -2px;
+}
+.main .list .line:nth-child(1) {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: url("../images/border.png") no-repeat 0 -222px;
+  bottom: -2px;
+  left: -2px;
+}
+.main .list .line:nth-child(2) {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  background: url("../images/border.png") no-repeat -368px -226px;
+  bottom: -2px;
+  right: -2px;
+}
+.main .list .header {
+  position: relative;
+  height: 2.66667rem;
+  line-height: 2.66667rem;
+}
+
+.main .list .header .my-select {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  z-index:9999;
+}
+.main .list .header .transmission {
+  position: absolute;
+  top: 7px;
+  right: 120px;
+  z-index:9999;
+}
+.main .list .header .my-select:nth-child(2) {
+  margin: 0 10px;
+}
+.main .list .header .amount {
+  position: absolute;
+  top: -6px;
+  left: 107px;
+}
+.main .list .header .amount span {
+  display: inline-block;
+  background: #275cf6;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-weight: 700;
+  margin: 0 2px;
+  height: 22px;
+  line-height: 22px;
+}
+.main .list .table-container {
+  list-style: none;
+  height: 90%;
+  width: 100%;
+  overflow: hidden;
+}
+.main .list .table-container .table-item {
+  text-align: center;
+  height: 2.26667rem;
+  line-height: 2.26667rem;
+}
+.main .list .table-container .table-item:nth-child(1) {
+  background-color: rgba(32, 33, 56, 0.9);
+}
+.main .list .table-container .table-item:nth-child(n + 2) {
+  line-height: 2.66667rem;
+  height: 2.66667rem;
+  border-bottom: 1px solid #24253C;
+}
+.main .list .table-container .table-item div {
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main .list .table-container .table-item div:nth-child(1) {
+  width: 20%;
+}
+.main .list .table-container .table-item div:nth-child(2) {
+  width: 20%;
+}
+.main .list .table-container .table-item div:nth-child(3) {
+  width: 20%;
+}
+.main .list .table-container .table-item div:nth-child(4) {
+  width: 20%;
+}
+.main .list .table-container .table-item div:nth-child(5) {
+  width: 10%;
+}
+.main .list .table-container .table-item div:nth-child(5) {
+  width: 10%;
+}
+.main .list .table-container .table-item .cell {
+  padding: 0 10px;
+}
+.main .list .table-container .table-item.severity {
+  background-color: rgba(184, 68, 74, 0.9);
+}
+
+

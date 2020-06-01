@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.DeptMapper">
+
+<!--    List<Dept> getAllDept();-->
+    <select id="getAllDept" resultType="bean.Dept">
+        select id, name, number from dept
+    </select>
+
+<!--    Dept getDeptById(String id);-->
+    <select id="getDeptById" resultType="bean.Dept">
+        select id, name, number from dept where id = #{id}
+    </select>
+
+<!--    //k=1代表数量加一，k=-1代表数量减一-->
+<!--    void updateNumber(@Param("k") Integer k, @Param("id")String id);-->
+    <select id="updateNumber">
+        update dept
+        <if test="k == 1">
+            set number = number + 1 where id = #{id}
+        </if>
+        <if test="k == -1">
+            set number = number - 1 where id = #{id}
+        </if>
+    </select>
+</mapper>
