@@ -18,4 +18,6 @@ public interface UserMapper {
     void delete(String id);
 
     List<User> filterBySexAndAge(@Param("sex")String sex, @Param("age")String age, @Param("type")String type);
+
+    List<User> getUsersLike(String str);
 }

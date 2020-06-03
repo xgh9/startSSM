@@ -17,4 +17,6 @@ public interface ServiceI {
     void update(User user);
 
     void delete(String id);
+
+    List<User> getUsersLike(String str);
 }

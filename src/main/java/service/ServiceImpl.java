@@ -64,4 +64,9 @@ public class ServiceImpl implements ServiceI{
         userMapper.delete(id);
         deptMapper.updateNumber(-1,user.getDept().getId().toString());
     }
+
+    @Override
+    public List<User> getUsersLike(String str) {
+        return userMapper.getUsersLike(str);
+    }
 }

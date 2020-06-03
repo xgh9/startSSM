@@ -54,4 +54,11 @@
 <!--            </if>-->
 <!--        </where>-->
 <!--    </select>-->
+
+<!--    List<User> getUsersLike(String str);-->
+    <select id="getUsersLike" resultMap="UserMap">
+        select u.id, u.userName, u.sex, u.age, u.did from user u
+        join dept d on u.did = d.id
+        and d.name like concat('%',#{str},'%')
+    </select>
 </mapper>
